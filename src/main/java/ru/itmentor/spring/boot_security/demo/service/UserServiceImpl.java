@@ -117,6 +117,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     }
 
     @PostConstruct
+    @Override
     public void addTestUsers() {
         roleRepository.save(new Role(1L, "ROLE_ADMIN"));
         roleRepository.save(new Role(2L, "ROLE_USER"));
